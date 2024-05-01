@@ -83,13 +83,30 @@ echo "Loops in PHP!";
 ?>
 
 <?php
-echo "<hr/>";
-echo "Do While Loop in PHP!";
+// echo "<hr/>";
+// echo "Do While Loop in PHP!";
+// echo "<br/>";
+// $num = 0;
+// do {
+//     echo "Current Loop Value  is $num";
+//     $num++;
+//     echo "<br/>";
+// } while ($num === 0);
+?>
+
+<?php
+
+echo "Foreach loop in PHP!";
 echo "<br/>";
-$num = 0;
-do {
-    echo "Current Loop Value  is $num";
-    $num++;
+$nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+foreach ($nums as $num) {
+    echo "Current Number is : $num";
     echo "<br/>";
-} while ($num === 0);
+}
+echo"<hr/>";
+foreach ($nums as $num):
+    echo $num;
+    echo "<br/>";
+endforeach
+
 ?>
