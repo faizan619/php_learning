@@ -1,0 +1,27 @@
+##########config######## 
+
+$host = "localhost";
+$username = "root";
+$password = null;
+
+$conn = new PDO("mysql:host=$host;dbname=practise",$username,$password);
+if($conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION)){
+    echo "Connected Successfully!";
+}
+else{
+    die("Failed to Connect with Database!");
+}
+
+
+
+######reading#######
+
+require("./config.php");
+
+$getStudents = $conn->prepare("SELECT * FROM students");
+$getStudents.execute();
+$student = $getStudents.fetchAll(PDO::FETCH_ASSOC);
+
+
+
+############writing##########
